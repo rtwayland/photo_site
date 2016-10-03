@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.glyphicon-remove').hide();
+            $('.trigger').click(function() {
+                $('input[type="email"]').parent().toggleClass('has-error');
+                $('.glyphicon-remove').toggle();
+            });
+        });
+    </script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="index.html">Site Name</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li> -->
+                    <li><a href="weddings.html">Wedding</a></li>
+                    <li><a href="#">Engagement</a></li>
+                    <li><a href="#">Family</a></li>
+                    <li><a href="#">Portraits</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="prices.html">Prices</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="contact-container">
+        <section class="about-me">
+            <div class="col-lg-6 col-lg-offset-1 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                <h1>About Me</h1>
+                <img src="images/columns/darjeeling-sun-invert.jpg" alt="" />
+                <p>Mauris elit leo, sodales sed ante id, sollicitudin elementum libero. Etiam et nisi lobortis, commodo risus id, sagittis odio. Nulla non cursus augue. Praesent in ante sem. Sed molestie aliquam libero ut tempus. Nullam porta dictum justo,
+                    eget ullamcorper enim interdum sed. Sed tempus eu arcu quis luctus. Sed lacinia tempus tincidunt. Suspendisse risus lacus, laoreet ut risus ut, molestie lacinia leo. Nullam quis tortor euismod, pretium odio at, sodales leo. Integer
+                    non volutpat metus, ac ullamcorper nisl.</p>
+                <p>Praesent ac diam quis massa faucibus maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin consequat, orci at laoreet iaculis, ante quam tincidunt massa, in egestas eros velit suscipit justo. Suspendisse et libero
+                    eget diam vestibulum rhoncus. Sed faucibus metus in ultrices lacinia. Phasellus mollis enim eget ligula aliquet viverra. Praesent turpis est, egestas et nisi dapibus, sollicitudin iaculis elit. Donec facilisis leo eget ornare venenatis.
+                    Sed tempus eu arcu quis luctus. Sed lacinia tempus tincidunt. Suspendisse risus lacus, laoreet ut risus ut, molestie lacinia leo. Nullam quis tortor euismod, pretium odio at, sodales leo. Integer non volutpat metus, ac ullamcorper
+                    nisl.</p>
+            </div>
+        </section>
+        <form action="email-form.php" method="post" class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+            <h2>Contact</h2>
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="First Name" required autofocus maxlength="30" pattern="[a-zA-Z ,.'-]+">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Last Name" required maxlength="30" pattern="[a-zA-Z ,.'-]+">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <div class=" has-feedback">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required maxlength="50">
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="8" cols="40" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <!-- <button type="button" class="btn btn-default trigger">Trigger</button>-->
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
