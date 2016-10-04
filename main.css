@@ -96,6 +96,8 @@ form {
 
 .about-me {
   color: #888; }
+  .about-me h1 {
+    margin-top: 0px; }
   @media screen and (min-width: 1200px) {
     .about-me div {
       padding-right: 100px; } }
