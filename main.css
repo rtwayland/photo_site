@@ -50,11 +50,17 @@ form {
   padding: 20px; }
   @media screen and (max-width: 1199px) {
     form {
-      margin-top: 20px; } }
+      margin-top: 20px;
+      margin-bottom: 50px; } }
   form h2 {
     padding-top: 0;
     margin-top: 0;
-    color: #cecece; }
+    color: #cecece;
+    display: inline-block; }
+  form .required-message {
+    float: right;
+    color: #cecece;
+    letter-spacing: 1px; }
   form label {
     color: #cecece;
     font-weight: lighter;
@@ -62,6 +68,12 @@ form {
   form .form-group input,
   form .form-group textarea {
     border-radius: 0; }
+    form .form-group input:invalid:focus,
+    form .form-group textarea:invalid:focus {
+      border: 2px solid #ffa899; }
+    form .form-group input:valid:focus,
+    form .form-group textarea:valid:focus {
+      border: 2px solid #8cd98c; }
   form .form-group textarea {
     resize: none; }
   form .btn {

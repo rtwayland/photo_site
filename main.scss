@@ -77,12 +77,20 @@ form {
     padding: 20px;
     @media screen and (max-width: 1199px) {
         margin-top: 20px;
+        margin-bottom: 50px;
     }
 
     h2 {
         padding-top: 0;
         margin-top: 0;
         color: $color-text-form;
+        display: inline-block;
+    }
+
+    .required-message {
+        float: right;
+        color: $color-text-form;
+        letter-spacing: 1px;
     }
 
     label {
@@ -96,6 +104,14 @@ form {
         textarea {
             border-radius: 0;
 
+            &:invalid:focus {
+                border: 2px solid #ffa899;
+            }
+
+            &:valid:focus {
+                border: 2px solid #8cd98c;
+            }
+
             &:focus {}
         }
 
@@ -103,7 +119,9 @@ form {
             resize: none;
         }
     }
-
+    // .required-token {
+    //     color: #ff9380;
+    // }
     .btn {
         border-radius: 0;
         margin: auto;
