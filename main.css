@@ -1,4 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Pavanam";
+/* Variables */
+/* General Styles */
 * {
   font-family: "Pavanam", sans-serif; }
   * h1,
@@ -14,6 +16,7 @@
 body {
   background-color: #222; }
 
+/* Home Page */
 .column {
   height: 100%; }
   .column img {
@@ -44,6 +47,13 @@ header .glyphicon-menu-right {
 
 .affix + .container-fluid {
   padding-top: 70px; }
+
+/*Contact Page*/
+.contact-container {
+  margin-top: 100px; }
+  @media screen and (max-width: 1199px) {
+    .contact-container {
+      margin-bottom: 100px; } }
 
 form {
   background-color: rgba(231, 231, 231, 0.3);
@@ -84,25 +94,6 @@ form {
     font-size: 1.2em;
     margin-top: 20px; }
 
-.prices-container {
-  margin: 200px auto;
-  width: 192px;
-  color: #888; }
-  .prices-container td {
-    padding-right: 5px;
-    padding-bottom: 10px; }
-
-.email-confirmation-container {
-  margin: 200px auto;
-  width: 275px;
-  color: #888; }
-
-.contact-container {
-  margin-top: 100px; }
-  @media screen and (max-width: 1199px) {
-    .contact-container {
-      margin-bottom: 100px; } }
-
 .about-me {
   color: #888; }
   @media screen and (min-width: 1200px) {
@@ -125,6 +116,22 @@ form {
       .about-me img {
         width: 180px; } }
 
+/* Price Page */
+.prices-container {
+  margin: 200px auto;
+  width: 192px;
+  color: #888; }
+  .prices-container td {
+    padding-right: 5px;
+    padding-bottom: 10px; }
+
+/* Email Confirmation Page */
+.email-confirmation-container {
+  margin: 200px auto;
+  width: 275px;
+  color: #888; }
+
+/* Wedding Page */
 .wedding-preview {
   background-image: url("images/home-carousel/moonrise-lake.jpg");
   background-size: cover;
@@ -145,6 +152,7 @@ form {
 .modal-body {
   padding: 5px; }
 
+/* Home Modal Preview */
 #preview-modal .modal-content {
   background-color: #222; }
 #preview-modal .modal-header {
@@ -163,6 +171,7 @@ form {
   #preview-modal .close:hover {
     opacity: 0.7; }
 
+/* Wedding Page Modal */
 #wedding-modal .modal-content {
   background-color: #222; }
 #wedding-modal .modal-header {
@@ -175,10 +184,5 @@ form {
   font-family: sans-serif; }
   #wedding-modal .close:hover {
     opacity: 0.7; }
-
-#thank-you-panel {
-  margin-top: 100px; }
-  #thank-you-panel .panel-body {
-    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

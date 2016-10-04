@@ -1,10 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Pavanam';
+/* Variables */
 $bg-main: #222;
 $bg-form: rgba(231, 231, 231, .3); // $bg-form: #666;
 $color-text-main: #888;
 $color-text-form: darken(#e7e7e7, 10%);
 $font-family-standard: 'Pavanam', sans-serif;
-
+/* General Styles */
 * {
     font-family: $font-family-standard;
 
@@ -25,7 +26,7 @@ $font-family-standard: 'Pavanam', sans-serif;
 body {
     background-color: $bg-main;
 }
-
+/* Home Page */
 .column {
     height: 100%;
 
@@ -71,7 +72,14 @@ header {
 .affix+.container-fluid {
     padding-top: 70px;
 }
-
+/*Contact Page*/
+.contact-container {
+    margin-top: 100px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 100px;
+    }
+}
+// Form
 form {
     background-color: $bg-form;
     padding: 20px;
@@ -131,31 +139,7 @@ form {
         margin-top: 20px;
     }
 }
-
-.prices-container {
-    margin: 200px auto;
-    width: 192px;
-    color: $color-text-main;
-
-    td {
-        padding-right: 5px;
-        padding-bottom: 10px;
-    }
-}
-
-.email-confirmation-container {
-    margin: 200px auto;
-    width: 275px;
-    color: $color-text-main;
-}
-
-.contact-container {
-    margin-top: 100px;
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 100px;
-    }
-}
-
+//Text Section
 .about-me {
     color: $color-text-main;
 
@@ -185,7 +169,24 @@ form {
         }
     }
 }
+/* Price Page */
+.prices-container {
+    margin: 200px auto;
+    width: 192px;
+    color: $color-text-main;
 
+    td {
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
+}
+/* Email Confirmation Page */
+.email-confirmation-container {
+    margin: 200px auto;
+    width: 275px;
+    color: $color-text-main;
+}
+/* Wedding Page */
 .wedding-preview {
     background-image: url("images/home-carousel/moonrise-lake.jpg");
     background-size: cover;
@@ -210,7 +211,7 @@ form {
 .modal-body {
     padding: 5px;
 }
-
+/* Home Modal Preview */
 #preview-modal {
     .modal-content {
         background-color: $bg-main;
@@ -241,7 +242,7 @@ form {
         }
     }
 }
-
+/* Wedding Page Modal */
 #wedding-modal {
     .modal-content {
         background-color: $bg-main;
@@ -263,11 +264,10 @@ form {
         }
     }
 }
-
-#thank-you-panel {
-    margin-top: 100px;
-
-    .panel-body {
-        text-align: center;
-    }
-}
+// #thank-you-panel {
+//     margin-top: 100px;
+//
+//     .panel-body {
+//         text-align: center;
+//     }
+// }
