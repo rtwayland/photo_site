@@ -1,12 +1,26 @@
 @import 'https://fonts.googleapis.com/css?family=Pavanam';
 /* Variables */
-$bg-main: #222;
-$bg-form: rgba(231, 231, 231, .3); // $bg-form: #666;
-$color-text-main: #888;
-$color-text-form: darken(#e7e7e7, 10%);
-$color-text-overlay: #222;
 $font-family-standard: 'Pavanam', sans-serif;
+/* White version of the site */
+$bg-nav: #fff;
+$bg-main: #fff;
+$bg-form: #E0E0E0;
+$color-text-main: #555;
+$color-text-form: #555;
+$color-close-icon: #222;
+$color-text-overlay: #222;
 $color-overlay: rgba(255, 255, 255, .5);
+$bg-modal-backdrop: rgba(255, 255, 255, 0.9);
+$color-dark-main: #222;
+$color-shadow: #777;
+/* Dark version of the site */
+// $bg-main: #222;
+// $bg-form: rgba(231, 231, 231, .3);
+// $color-text-main: #888;
+// $color-text-form: darken(#e7e7e7, 10%);
+// $color-close-icon: #fff;
+// $color-text-overlay: #222;
+// $color-overlay: rgba(255, 255, 255, .5);
 /* General Styles */
 * {
     font-family: $font-family-standard;
@@ -19,10 +33,9 @@ $color-overlay: rgba(255, 255, 255, .5);
     h6 {
         font-weight: bold;
     }
-
-    p {
-        letter-spacing: 0.5px;
-    }
+    // p {
+    //     letter-spacing: 0.5px;
+    // }
 }
 
 body {
@@ -34,7 +47,13 @@ body {
 
     img {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.collage {
+    .column {
+        padding: 5px;
     }
 }
 
@@ -55,14 +74,23 @@ header {
 }
 
 .navbar {
+    background-color: $bg-nav;
     z-index: 1;
     border-radius: 0;
+
+    .active-nav-link {
+        border-bottom: 2px solid $color-dark-main;
+    }
 
     li {
         a {
             font-weight: bold;
             font-size: 1.2em;
         }
+    }
+
+    .navbar-toggle {
+        border-radius: 0;
     }
 }
 
@@ -130,16 +158,20 @@ form {
             resize: none;
         }
     }
-    // .required-token {
-    //     color: #ff9380;
-    // }
+
     .btn {
+        background-color: $bg-main;
         border-radius: 0;
         margin: auto;
         display: block;
         width: 50%;
         font-size: 1.2em;
         margin-top: 20px;
+
+        &:hover {
+            background-color: $bg-main;
+            box-shadow: 1px 1px 4px $color-shadow;
+        }
     }
 }
 //Text Section
@@ -196,18 +228,22 @@ form {
 }
 /* Wedding Page */
 #wedding-preview-container {
-  #wedding1 {
-    background-image: url("images/home-carousel/moonrise-lake.jpg");
-  }
-  #wedding2 {
-    background-image: url("images/home-carousel/moonrise-binoculars.jpg");
-  }
-  #wedding3 {
-    background-image: url("images/home-carousel/moonrise-record.jpg");
-  }
-  #wedding4 {
-    background-image: url("images/home-carousel/darjeeling-running.jpg");
-  }
+    #wedding1 {
+        background-image: url("images/home-carousel/moonrise-lake.jpg");
+    }
+
+    #wedding2 {
+        background-image: url("images/home-carousel/moonrise-binoculars.jpg");
+    }
+
+    #wedding3 {
+        background-image: url("images/home-carousel/moonrise-record.jpg");
+    }
+
+    #wedding4 {
+        background-image: url("images/home-carousel/darjeeling-running.jpg");
+    }
+
     .wedding-preview {
         background-size: cover;
         background-position: center;
@@ -266,14 +302,14 @@ form {
             max-width: 100%;
             max-height: 750px;
             display: block;
-            margin: auto;
+            margin: -5px auto auto;
         }
     }
 
     .close {
         margin-top: -12px;
         text-shadow: none;
-        color: #fff;
+        color: $color-close-icon;
         opacity: 0.4;
         font-family: sans-serif;
 
@@ -295,7 +331,7 @@ form {
 
     .close {
         text-shadow: none;
-        color: #fff;
+        color: $color-close-icon;
         opacity: 0.4;
         font-family: sans-serif;
 
@@ -303,6 +339,14 @@ form {
             opacity: 0.7;
         }
     }
+
+    .first-of-two-columns {
+        padding-right: 0;
+    }
+}
+
+.modal-backdrop {
+    background-color: $bg-modal-backdrop;
 }
 // #thank-you-panel {
 //     margin-top: 100px;

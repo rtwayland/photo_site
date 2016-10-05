@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="description" content="Amanda Snider's Photography Portfolio. Her work consists of wedding, engagement, family, and portrait photography.">
+    <meta name="author" content="Amanda Snider">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Photography</title>
@@ -21,9 +23,9 @@
         $(document).ready(function() {
             var initialPageHeight = $(window).height();
             $('.img-fluid-bg').css('height', initialPageHeight);
-            $(".navbar").affix({
+            $('.navbar').affix({
                 offset: {
-                    top: $("header").outerHeight(true)
+                    top: $('header').outerHeight(true)
                 }
             });
 
@@ -33,9 +35,9 @@
             });
 
             $('.collage img').click(function(event) {
-              var imgSrc = $(this).attr('src');
-              $('#preview-modal img').attr('src', imgSrc);
-              $("#preview-modal").modal();
+                var imgSrc = $(this).attr('src');
+                $('#preview-modal img').attr('src', imgSrc);
+                $("#preview-modal").modal();
             });
 
         });
@@ -90,7 +92,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active-nav-link"><a href="index.html">Home</a></li>
                     <!-- <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -153,17 +155,17 @@
         </div>
 
         <div class="modal fade" id="preview-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <!-- <h4 class="modal-title" id="">Picture</h4> -->
-              </div>
-              <div class="modal-body">
-                  <img src="images/blank-img.jpg" alt="">
-              </div>
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <!-- <h4 class="modal-title" id="">Picture</h4> -->
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/blank-img.jpg" alt="">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
 
